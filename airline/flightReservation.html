@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seat Reservation Airline Management</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    
+    .reservation {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .seat-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .seat {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      background-color: #eee;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .seat.selected {
+      background-color: #ff4081;
+      color: #fff;
+    }
+    
+    .seat.reserved {
+      background-color: #9e9e9e;
+      cursor: not-allowed;
+    }
+    
+    .seat.unavailable {
+      background-color: #f4f4f4;
+      cursor: not-allowed;
+    }
+    
+    .seat span {
+      font-size: 12px;
+    }
+    
+    .seat.selected span {
+      font-weight: bold;
+    }
+    
+    .actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .actions button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: #2196f3;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .actions button:disabled {
+      background-color: #9e9e9e;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand  "href="index.html">
+                        <img src="img/airplane.png" height="20px"alt="logo">Airline Management System</a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="Flightsearch.html">Flightsearch/Booking</a></li>
+                        <li><a href="flightReservation.html">Flight Reservation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header> <br> <br>
+
+
+
+
+  <div class="reservation">
+    <h1>Seat Reservation</h1>
+    <div class="seat-container">
+      <div class="seat  "  onclick="hello()" id="hello"  ></div>
+      <div class="seat"></div>
+      <div class="seat reserved"></div>
+      <div class="seat selected"><span>1</span></div>
+      <div class="seat"></div>
+      <div class="seat unavailable"></div>
+      <div class="seat"></div>
+      <div class="seat selected"><span>2</span></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat selected"><span>3</span></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat selected " >4</div>
+      <div class="seat"></div>
+      <div class="seat occupied "></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    <div class="actions">
+      <button  type="submit" value="submit" id="submit" >Reserve</button>
+    </div>
+  </div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+</html>
